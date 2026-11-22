@@ -142,7 +142,277 @@ const baseLessons = [
     ]
   }
 ];
-const lessons = [...baseLessons, ...extraLessons];
+const advancedLessons = [
+  {
+    "id": "opiniao",
+    "unit": "13",
+    "title": "Dar a tua opinião",
+    "subtitle": "Exprimer une opinion nuancée",
+    "duration": 9,
+    "icon": "💭",
+    "description": "Nuancer une opinion et exprimer une concession.",
+    "exercises": [
+      {
+        "kind": "listen",
+        "text": "Apesar de ser caro, acho que vale a pena.",
+        "prompt": "Que signifie cette phrase ?",
+        "options": [
+          "Même si c’est cher, je pense que ça en vaut la peine.",
+          "C’est bon marché, je vais acheter.",
+          "Je ne sais pas si cela coûte cher."
+        ],
+        "answer": "Même si c’est cher, je pense que ça en vaut la peine.",
+        "meaning": "Malgré son prix, la personne estime que cela en vaut la peine."
+      },
+      {
+        "kind": "reply",
+        "prompt": "Un ami te demande si tu es d’accord, mais tu hésites.",
+        "options": [
+          "Não tenho a certeza, depende da situação.",
+          "Queria duas águas, se faz favor.",
+          "A estação fica ali."
+        ],
+        "answer": "Não tenho a certeza, depende da situação.",
+        "meaning": "Je ne suis pas certain, cela dépend de la situation."
+      },
+      {
+        "kind": "arrange",
+        "prompt": "Construis « Je pense que cela en vaut la peine. »",
+        "words": [
+          "Acho",
+          "que",
+          "vale",
+          "a",
+          "pena",
+          "."
+        ],
+        "answer": "Acho que vale a pena.",
+        "meaning": "Je pense que cela en vaut la peine."
+      },
+      {
+        "kind": "speak",
+        "text": "Embora seja difícil, quero continuar a aprender.",
+        "meaning": "Même si c’est difficile, je veux continuer à apprendre."
+      }
+    ]
+  },
+  {
+    "id": "imprevistos",
+    "unit": "14",
+    "title": "Resolver imprevistos",
+    "subtitle": "Réagir à un contretemps",
+    "duration": 9,
+    "icon": "🚦",
+    "description": "Trouver une solution quand un plan ne se déroule pas comme prévu.",
+    "exercises": [
+      {
+        "kind": "listen",
+        "text": "O comboio foi cancelado devido à greve.",
+        "prompt": "Que vient-il de se passer ?",
+        "options": [
+          "Le train a été annulé à cause de la grève.",
+          "Le train part plus tôt aujourd’hui.",
+          "La gare ferme pour travaux."
+        ],
+        "answer": "Le train a été annulé à cause de la grève.",
+        "meaning": "« Devido a » exprime la cause ; « greve » signifie grève."
+      },
+      {
+        "kind": "reply",
+        "prompt": "Tu demandes s’il existe une autre solution.",
+        "options": [
+          "Há alguma alternativa disponível?",
+          "O café está muito bom.",
+          "Trabalho até às seis."
+        ],
+        "answer": "Há alguma alternativa disponível?",
+        "meaning": "Y a-t-il une autre solution disponible ?"
+      },
+      {
+        "kind": "arrange",
+        "prompt": "Construis « Je voudrais déposer une réclamation. »",
+        "words": [
+          "Gostaria",
+          "de",
+          "apresentar",
+          "uma",
+          "reclamação",
+          "."
+        ],
+        "answer": "Gostaria de apresentar uma reclamação.",
+        "meaning": "Je voudrais déposer une réclamation."
+      },
+      {
+        "kind": "speak",
+        "text": "Se houver outro horário, prefiro sair mais cedo.",
+        "meaning": "S’il y a un autre horaire, je préfère partir plus tôt."
+      }
+    ]
+  },
+  {
+    "id": "hipoteses",
+    "unit": "15",
+    "title": "E se fosse possível?",
+    "subtitle": "Exprimer des hypothèses",
+    "duration": 9,
+    "icon": "🌤️",
+    "description": "Parler de possibilités et de situations imaginaires.",
+    "exercises": [
+      {
+        "kind": "listen",
+        "text": "Se tivesse mais tempo, visitaria o norte do país.",
+        "prompt": "Que souhaite dire la personne ?",
+        "options": [
+          "Si elle avait plus de temps, elle visiterait le nord du pays.",
+          "Elle a visité le nord hier.",
+          "Elle aura plus de temps demain."
+        ],
+        "answer": "Si elle avait plus de temps, elle visiterait le nord du pays.",
+        "meaning": "« Se tivesse » exprime une hypothèse."
+      },
+      {
+        "kind": "reply",
+        "prompt": "Tu imagines un voyage au Portugal avec plus de temps.",
+        "options": [
+          "Se pudesse, ficava mais uns dias.",
+          "Hoje está a chover.",
+          "Onde é a bilheteira?"
+        ],
+        "answer": "Se pudesse, ficava mais uns dias.",
+        "meaning": "Si je pouvais, je resterais quelques jours de plus."
+      },
+      {
+        "kind": "arrange",
+        "prompt": "Construis « Si j’avais le temps, j’irais avec toi. »",
+        "words": [
+          "Se",
+          "tivesse",
+          "tempo",
+          ",",
+          "iria",
+          "contigo",
+          "."
+        ],
+        "answer": "Se tivesse tempo, iria contigo.",
+        "meaning": "Si j’avais le temps, j’irais avec toi."
+      },
+      {
+        "kind": "speak",
+        "text": "Se pudesse, passava mais tempo em Portugal.",
+        "meaning": "Si je pouvais, je passerais plus de temps au Portugal."
+      }
+    ]
+  },
+  {
+    "id": "trabalho",
+    "unit": "16",
+    "title": "Falar do trabalho",
+    "subtitle": "Expliquer son activité",
+    "duration": 9,
+    "icon": "💼",
+    "description": "Décrire ses responsabilités et ses projets professionnels.",
+    "exercises": [
+      {
+        "kind": "listen",
+        "text": "Sou responsável por uma equipa e coordeno vários projetos.",
+        "prompt": "Quel est le rôle de cette personne ?",
+        "options": [
+          "Elle dirige une équipe et coordonne plusieurs projets.",
+          "Elle cherche un nouveau travail.",
+          "Elle travaille uniquement le week-end."
+        ],
+        "answer": "Elle dirige une équipe et coordonne plusieurs projets.",
+        "meaning": "« Ser responsável por » signifie être chargé de."
+      },
+      {
+        "kind": "reply",
+        "prompt": "Tu expliques que tes horaires changent selon les semaines.",
+        "options": [
+          "O meu horário varia de semana para semana.",
+          "Gosto muito desta sobremesa.",
+          "Preciso de apanhar o autocarro."
+        ],
+        "answer": "O meu horário varia de semana para semana.",
+        "meaning": "Mon horaire varie d’une semaine à l’autre."
+      },
+      {
+        "kind": "arrange",
+        "prompt": "Construis « Je dois organiser mes priorités. »",
+        "words": [
+          "Tenho",
+          "de",
+          "organizar",
+          "as",
+          "minhas",
+          "prioridades",
+          "."
+        ],
+        "answer": "Tenho de organizar as minhas prioridades.",
+        "meaning": "Je dois organiser mes priorités."
+      },
+      {
+        "kind": "speak",
+        "text": "Estou a tentar conciliar o trabalho com a vida familiar.",
+        "meaning": "J’essaie de concilier le travail avec la vie familiale."
+      }
+    ]
+  },
+  {
+    "id": "nuances",
+    "unit": "17",
+    "title": "Conversas com nuances",
+    "subtitle": "Douter, expliquer et proposer",
+    "duration": 9,
+    "icon": "🧩",
+    "description": "Nuancer son propos et proposer une solution avec tact.",
+    "exercises": [
+      {
+        "kind": "listen",
+        "text": "Não me parece que seja a melhor solução.",
+        "prompt": "Quelle est l’intention de la personne ?",
+        "options": [
+          "Elle doute que ce soit la meilleure solution.",
+          "Elle a trouvé la solution idéale.",
+          "Elle demande où est la solution."
+        ],
+        "answer": "Elle doute que ce soit la meilleure solution.",
+        "meaning": "« Não me parece que » exprime un doute nuancé."
+      },
+      {
+        "kind": "reply",
+        "prompt": "Tu proposes d’en parler une autre fois.",
+        "options": [
+          "Podemos voltar a falar disso noutra altura.",
+          "Quero pagar com cartão.",
+          "Está muito calor hoje."
+        ],
+        "answer": "Podemos voltar a falar disso noutra altura.",
+        "meaning": "Nous pouvons en reparler à un autre moment."
+      },
+      {
+        "kind": "arrange",
+        "prompt": "Construis « Il est possible qu’il arrive plus tard. »",
+        "words": [
+          "É",
+          "possível",
+          "que",
+          "chegue",
+          "mais",
+          "tarde",
+          "."
+        ],
+        "answer": "É possível que chegue mais tarde.",
+        "meaning": "Il est possible qu’il arrive plus tard."
+      },
+      {
+        "kind": "speak",
+        "text": "Prefiro pensar melhor antes de tomar uma decisão.",
+        "meaning": "Je préfère mieux réfléchir avant de prendre une décision."
+      }
+    ]
+  }
+];
+const lessons = [...baseLessons, ...extraLessons, ...advancedLessons];
 const phrases = [
   ['Tudo bem?', 'Tout va bien ?'],
   ['Estou bem, obrigado.', 'Je vais bien, merci.'],
