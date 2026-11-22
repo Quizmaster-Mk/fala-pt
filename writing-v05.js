@@ -88,6 +88,26 @@
     if(accent)return {status:'minor',accepted,canonical:exercise.answer,matched:accent,tip:exercise.tip||'',message:'La phrase est correcte dans le fond. Vérifie les accents et signes écrits.'};
     return {status:'unverified',accepted,canonical:exercise.answer,tip:exercise.tip||'',message:'Cette formulation n’est pas encore dans les réponses reconnues. Elle peut être valable : compare avec les exemples.'};
   }
+  const lessonNotes = {
+    ola:'« Tudo bem? » se dit pour prendre des nouvelles. « E contigo? » signifie « Et toi ? » dans un registre familier.',
+    cafe:'Au Portugal, « queria » est une manière naturelle et polie de commander.',
+    familia:'« De onde és? » s’utilise avec « tu » ; « de onde é? » est possible dans un registre de politesse.',
+    devagar:'« Não percebi » signifie « Je n’ai pas compris ». « Pode repetir? » sert à demander une répétition.',
+    compras:'« Quanto custa? » demande le prix ; « Posso pagar com cartão? » demande si le paiement par carte est possible.',
+    estacao:'« Comboio » signifie train en portugais européen, et « estação » signifie gare.',
+    restaurante:'« Ementa » signifie la carte du restaurant ; « a conta » signifie l’addition.',
+    telefone:'« Estou a ouvir mal » signifie « Je vous entends mal » ; « ligação » peut désigner la connexion téléphonique.',
+    rotina:'Pour une action en cours au Portugal, on emploie souvent « estar a + infinitif ».',
+    meteorologia:'« Estar a chover » signifie « être en train de pleuvoir » ; « amanhã » veut dire demain.',
+    alojamento:'« Pequeno-almoço » est le mot utilisé au Portugal pour « petit déjeuner ».',
+    passado:'« Fomos » est le passé de « ir » avec « nós » ; « ontem » signifie hier.',
+    opiniao:'« Apesar de » est suivi de l’infinitif ; « embora » s’emploie fréquemment avec le subjonctif.',
+    imprevistos:'« Devido a » introduit une cause ; « há alguma alternativa? » demande une autre solution.',
+    hipoteses:'Pour une hypothèse, la structure « se tivesse…, iria… » est courante.',
+    trabalho:'« Ser responsável por » et « conciliar… com… » sont utiles pour décrire sa vie professionnelle.',
+    nuances:'« Não me parece que seja… » est une façon nuancée d’exprimer un doute.'
+  };
+  function lessonTip(id) { return lessonNotes[id]||''; }
   const existingAlternatives = {
     'Estou bem, obrigado. E contigo?':['Estou bem, obrigada. E contigo?','Estou bem, obrigado. E tu?','Estou bem, obrigada. E tu?'],
     'Queria um café e uma água, se faz favor.':['Queria um café e uma água, por favor.','Gostaria de um café e de uma água, se faz favor.'],
@@ -107,9 +127,10 @@
     'Estou a tentar conciliar o trabalho com a vida familiar.':['Tento conciliar o trabalho com a vida familiar.'],
     'Prefiro pensar melhor antes de tomar uma decisão.':['Prefiro refletir antes de tomar uma decisão.']
   };
-  function acceptable(exercise) {
+  function acceptable(exercise,lessonId) {
     return {...exercise,answer:exercise.answer||exercise.text,
+      tip:exercise.tip||lessonTip(lessonId),
       alternatives:[...(exercise.alternatives||[]),...(existingAlternatives[exercise.text]||[])]};
   }
-  root.FalaWriting = {writtenTasks,evaluate,comparable,acceptable};
+  root.FalaWriting = {writtenTasks,evaluate,comparable,acceptable,lessonTip};
 })(window);
