@@ -1,4 +1,4 @@
-# Fala PT 🇵🇹 — V0.4
+# Fala PT 🇵🇹 — V0.5
 
 Application d’apprentissage du **portugais du Portugal (PT-PT)** pour francophones, avec une priorité à la lecture, aux dialogues écrits et à la construction de phrases.
 
@@ -16,9 +16,15 @@ Si le site n’est pas encore actif : GitHub → Settings → Pages → **Deploy
 | **Quelques notions** | 6 | 4 | Restaurant, téléphone, quotidien, voyages, petits récits |
 | **Avancé** | 5 | 2 | Opinions, hypothèses, imprévus, travail et nuances |
 
-**Total : 17 leçons, 68 exercices et 8 dialogues guidés.** Les niveaux correspondent à une difficulté indicative et non à une certification CECRL.
+**Total : 17 leçons, 101 exercices et 8 dialogues guidés.** Les niveaux correspondent à une difficulté indicative et non à une certification CECRL.
 
 Au premier accès, l’utilisateur choisit son parcours. Il peut ensuite changer de niveau depuis *Apprendre* et *Profil* ; les leçons et dialogues terminés restent conservés en stockage local. La clé de progression précédente `fala-pt-v1` est maintenue pour éviter d’effacer les données déjà enregistrées.
+
+## Exercices écrits V0.5
+
+Chaque niveau propose désormais des productions écrites supplémentaires : **Débutant** (phrases à compléter), **Quelques notions** (phrases à compléter et réponses à rédiger), **Avancé** (phrases à compléter, traductions et mini-paragraphes de deux phrases). Les exercices existants sont conservés.
+
+Le module `writing-v05.js` fournit les 33 exercices complémentaires et un correcteur local, sans API externe. Il vérifie des formulations explicitement validées et distingue une réponse exacte, une réponse où les accents sont à revoir, et une formulation non reconnue. **Une réponse non reconnue n’est pas automatiquement jugée fausse ni comptabilisée comme erreur.** L’utilisateur peut consulter des variantes et une explication pédagogique, modifier sa réponse ou poursuivre sans note.
 
 ## Types d’exercices
 
@@ -31,7 +37,7 @@ Au premier accès, l’utilisateur choisit son parcours. Il peut ensuite changer
 
 ## Limites actuelles
 
-Cette V0.4 est une démonstration **entièrement statique** dans `index.html`, sans compte, base de données ni synchronisation interappareils. Les fonctionnalités vocales sont reportées. Les traductions écrites sont corrigées par comparaison avec une formulation attendue (tolérance aux majuscules, accents et ponctuation) ; les réponses synonymes ou variantes grammaticalement valables ne sont pas toutes reconnues.
+Cette V0.5 est une démonstration **entièrement statique** avec `index.html` et `writing-v05.js`, sans compte, base de données ni synchronisation interappareils. Les fonctionnalités vocales sont reportées. Il ne s’agit **pas d’un correcteur grammatical général** : les variantes reconnues sont sélectionnées manuellement, et les autres formulations grammaticalement acceptables ne sont pas toutes détectées. Les corrections décrivent la formulation attendue, mais ne diagnostiquent pas systématiquement les erreurs de grammaire.
 
 ## Développement et diffusion
 
