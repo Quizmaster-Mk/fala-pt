@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#103f36"><title>Fala PT — démonstration autonome</title><style>:root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#20352f;background:#f7f8f4;font-synthesis:none}*{box-sizing:border-box}body{margin:0}button{font:inherit;cursor:pointer}button:disabled{cursor:not-allowed;opacity:.5}a{color:inherit}#app{min-height:100dvh}.shell{display:flex;min-height:100dvh}.sidebar{width:248px;background:#113d35;color:#e9f1e8;padding:28px 18px;display:flex;flex-direction:column;gap:34px;position:sticky;top:0;height:100dvh}.brand{display:flex;align-items:center;gap:12px;padding:0 14px}.logo{display:grid;place-items:center;width:44px;height:44px;background:#eccc64;color:#173a33;border-radius:15px;font-weight:850;font-size:25px}.brand-name{font-size:24px;font-weight:850;letter-spacing:-1px}.brand-sub{font-size:10px;opacity:.7;letter-spacing:1.4px}.nav-list{display:grid;gap:7px}.nav-btn{border:0;background:transparent;color:#b9d1c9;border-radius:14px;padding:14px 16px;text-align:left;font-size:14px;font-weight:620;display:flex;align-items:center;gap:13px}.nav-btn span:first-child{font-size:20px}.nav-btn.active,.nav-btn:hover{color:#123b31;background:#e9f0e7}.sidebar-foot{margin-top:auto;border:1px solid #517268;border-radius:18px;padding:16px;font-size:12px;line-height:1.6;color:#d1e1da}.sidebar-foot strong{display:block;color:#f5d16d;font-size:13px;margin-bottom:4px}.main{flex:1;min-width:0}.wrap{max-width:1080px;margin:0 auto;padding:39px 38px 100px}.topline{display:flex;justify-content:space-between;align-items:center;margin-bottom:25px;gap:12px}.eyebrow{text-transform:uppercase;letter-spacing:2px;font-size:11px;font-weight:800;color:#658479}.date{color:#72877e;font-size:13px;font-weight:600}.pill{background:white;border:1px solid #e1e8e0;padding:8px 14px;border-radius:999px;font-size:12px;font-weight:750;color:#3a6353}.hero{background:#113f36;border-radius:28px;padding:34px;display:grid;grid-template-columns:1fr auto;gap:16px;color:white;position:relative;overflow:hidden}.hero:before,.hero:after{content:"";position:absolute;border:1px solid #34705b;border-radius:50%;width:300px;height:300px;right:-80px;top:-108px}.hero:after{width:220px;height:220px;right:-40px;top:-65px}.hero-inner{z-index:1}.hero h1{font-size:clamp(26px,3.6vw,43px);line-height:1.13;margin:10px 0 13px;letter-spacing:-1.5px;max-width:650px}.hero p{font-size:14px;line-height:1.6;color:#c8ddd2;max-width:490px;margin:0 0 24px}.hero-accent{color:#f1d472}.hero-decor{display:grid;place-items:center;width:170px;z-index:1;font-size:90px;filter:drop-shadow(0 12px 10px #09291b33)}.chip{display:inline-flex;gap:6px;align-items:center;background:#28584c;border:1px solid #477365;color:#dcebe2;padding:8px 11px;border-radius:999px;font-size:11px;font-weight:700}.btn{border:0;background:#edcf71;color:#1a392f;font-weight:780;padding:13px 19px;border-radius:13px;display:inline-flex;align-items:center;justify-content:center;gap:9px;transition:transform .1s,background .1s}.btn:hover{background:#f5d984;transform:translateY(-1px)}.btn.secondary{background:#e8efea;color:#224e3e}.btn.ghost{background:transparent;color:#315f4b;border:1px solid #d9e4d9}.btn.dark{background:#154b3d;color:#fff}.btn.wide{width:100%}.section-head{display:flex;align-items:end;justify-content:space-between;gap:8px;margin:30px 0 16px}.section-head h2{font-size:21px;letter-spacing:-.5px;margin:0}.section-head p{font-size:13px;color:#73847a;margin:5px 0 0}.mini-link{border:0;background:transparent;color:#24694e;font-size:12px;font-weight:800;padding:5px}.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:18px 0}.stat{background:#fff;border:1px solid #e5ebe4;padding:18px;border-radius:18px}.stat .slabel{color:#84948a;font-size:12px;margin-bottom:7px}.stat .svalue{font-size:27px;font-weight:850;letter-spacing:-1px}.stat .sfoot{font-size:11px;color:#799085;margin-top:5px}.lesson-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.lesson{background:#fff;border:1px solid #e4ebe4;border-radius:20px;padding:21px;text-align:left;display:flex;gap:16px;align-items:flex-start;min-height:154px;transition:box-shadow .1s,transform .1s}.lesson:hover{box-shadow:0 8px 24px #164d3021;transform:translateY(-2px)}.lesson-icon{background:#eff5ef;border-radius:15px;min-width:57px;height:57px;display:grid;place-items:center;font-size:27px}.lesson-content{min-width:0;flex:1}.lesson-meta{font-size:11px;font-weight:750;color:#6b8b78;letter-spacing:.5px}.lesson-title{font-size:18px;font-weight:850;margin:6px 0;letter-spacing:-.4px}.lesson-desc{font-size:12px;color:#6f8275;line-height:1.45}.lesson-end{margin-top:11px;font-size:12px;font-weight:770;color:#266a4e}.boxcard{border:1px solid #e4ebe4;border-radius:23px;background:#fff;padding:25px}.muted{color:#75877d}.progress-bar{height:9px;background:#e6ece5;border-radius:20px;overflow:hidden}.progress-bar>div{height:100%;background:#b0b75a;border-radius:20px;transition:width .3s}.subhero{margin:14px 0 28px}.subhero h1{font-size:32px;margin:10px 0 6px;letter-spacing:-1px}.subhero p{color:#73867a;font-size:14px;margin:0;line-height:1.55}.exercise{max-width:680px;margin:10px auto}.exhead{display:flex;align-items:center;gap:15px;margin:0 0 25px}.back{border:1px solid #dce7db;background:white;border-radius:12px;padding:10px 12px;font-weight:800;color:#386452}.exhead-main{flex:1}.exhead-label{font-size:12px;font-weight:760;color:#658474;margin-bottom:8px}.question{font-size:25px;font-weight:850;line-height:1.3;letter-spacing:-.7px;margin:0 0 15px}.hint{font-size:14px;color:#7a887d;line-height:1.5;margin-bottom:25px}.audio-btn{background:#e8f2ea;color:#225744;border:1px solid #cfe2d3;display:inline-flex;align-items:center;gap:9px;border-radius:14px;padding:15px 19px;font-size:14px;font-weight:800;margin:6px 0 22px}.options{display:grid;gap:12px;margin:14px 0}.option{padding:17px 18px;background:#fff;border:1.5px solid #dfe7de;border-radius:15px;text-align:left;font-weight:670;color:#314d40;line-height:1.45}.option:hover,.word:hover{background:#f4f8f3}.option.selected{border-color:#1c6c4d;background:#eef7ee}.option.good{border-color:#2d9b72;background:#eaf7ee}.option.bad{border-color:#d67c6b;background:#fff0eb}.feedback{border-radius:15px;padding:16px;margin:18px 0;background:#eff7ee;color:#21583c;font-size:13px;line-height:1.5}.feedback.error{background:#fff3ec;color:#8c4834}.fbtitle{font-weight:820;font-size:15px;margin-bottom:5px}.footactions{display:flex;gap:10px;margin-top:24px}.footactions>.btn{flex:1}.wordbank{display:flex;gap:9px;flex-wrap:wrap;min-height:60px}.word{padding:12px 15px;border:1px solid #d9e4d9;background:#fff;border-radius:11px;font-size:15px;font-weight:710}.word:disabled{opacity:.34}.answerline{display:flex;flex-wrap:wrap;gap:8px;min-height:83px;background:#f1f5ef;border:1px dashed #cedbcd;border-radius:14px;padding:12px;margin:5px 0 20px;align-items:start}.answerline .word{background:#e0eee1}.smallcap{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#76917f;font-weight:850;margin-bottom:9px}.recap{font-size:40px;text-align:center;padding:20px}.flashcard{text-align:center;min-height:260px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px}.flashcard .port{font-size:26px;font-weight:850}.flashcard .trans{font-size:17px;color:#658070}.review-actions{display:flex;gap:10px;justify-content:center}.listphrase{display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid #e6ede5;padding:12px 0}.listphrase:last-child{border:0}.listphrase strong{font-size:14px}.listphrase small{display:block;color:#7b8d81;margin-top:4px}.mini-audio{border:0;border-radius:11px;background:#edf3ec;color:#206348;padding:10px;font-weight:800}.note{background:#fff7e0;border:1px solid #f2dfab;border-radius:14px;padding:12px;font-size:12px;line-height:1.5;color:#806629;margin:15px 0}.switchrow{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #e4eae3;padding:17px 0;gap:8px}.switchrow:last-child{border:0}.switchrow select{padding:9px 12px;border-radius:11px;border:1px solid #dbe6db;background:#fff;color:#355a46;max-width:220px}.bottom-nav{display:none}.toast{position:fixed;bottom:25px;left:50%;transform:translateX(-50%);background:#113f36;color:white;padding:12px 18px;border-radius:12px;box-shadow:0 14px 38px #0003;z-index:9;font-size:13px;max-width:90vw}.hide{display:none!important}@media(max-width:900px){.sidebar{width:200px}.wrap{padding:29px 23px 100px}.hero-decor{width:100px;font-size:68px}.hero{padding:26px}}@media(max-width:680px){.sidebar{display:none}.bottom-nav{display:grid;grid-template-columns:repeat(5,1fr);position:fixed;z-index:8;bottom:0;left:0;right:0;padding:7px 5px calc(6px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid #e1e9df;box-shadow:0 -3px 20px #103c1c0d}.bottom-nav button{border:0;background:transparent;display:flex;flex-direction:column;gap:3px;align-items:center;padding:7px 2px;color:#819489;font-size:10px;font-weight:700}.bottom-nav .selected{color:#1a664b}.bottom-nav button span{font-size:22px}.wrap{padding:24px 16px calc(100px + env(safe-area-inset-bottom))}.topline{margin-bottom:17px}.hero{grid-template-columns:1fr;padding:25px;border-radius:23px}.hero h1{font-size:30px}.hero-decor{position:absolute;right:8px;top:12px;opacity:.24}.stat-grid{gap:8px}.stat{padding:13px 10px;border-radius:15px}.stat .slabel{font-size:11px}.stat .svalue{font-size:24px}.lesson-grid{grid-template-columns:1fr}.lesson{padding:17px;min-height:0}.section-head h2{font-size:19px}.subhero h1{font-size:29px}.boxcard{padding:19px}.question{font-size:22px}.exercise{margin-top:0}.footactions{flex-direction:column}.review-actions{flex-wrap:wrap}.brand-mini{display:inline-flex;align-items:center;gap:8px;font-size:17px;font-weight:850}.brand-mini .logo{width:31px;height:31px;border-radius:10px;font-size:17px}}@media(min-width:681px){.brand-mini{display:none}}
+
+/* V0.2 — pratique en dialogues guidés */
+.practice-tabs{display:flex;gap:8px;margin:18px 0 22px;flex-wrap:wrap}
+.practice-tabs button{border:1px solid #d8e5dd;background:#fff;padding:11px 15px;border-radius:13px;font-weight:750;color:#476559}
+.practice-tabs button.on{background:#153f36;border-color:#153f36;color:#fff}
+.conversation-summary{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.conversation-summary h2{font-size:21px;margin:8px 0 10px}
+.conversation-summary p{color:#627a6d;line-height:1.5;font-size:14px;max-width:490px;margin:0}
+.conversation-emoji{font-size:54px;line-height:1}
+.dialogue-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.dialogue-card{width:100%;display:flex;text-align:left;align-items:flex-start;gap:13px;padding:20px;border:1px solid #e0e9e1;border-radius:19px;background:#fff;box-shadow:0 4px 18px rgba(21,64,46,.045);transition:transform .15s,border-color .15s}
+.dialogue-card:hover{transform:translateY(-2px);border-color:#9fc6a8}
+.dialogue-icon{font-size:27px;border-radius:14px;background:#f0f5ef;padding:10px;line-height:1.35}
+.dialogue-body{min-width:0}
+.dialogue-body h3{font-size:18px;margin:7px 0 7px;color:#1e3930}
+.dialogue-body p{font-size:13px;line-height:1.45;color:#688072;margin:0 0 13px}
+.dialogue-go{font-size:13px;font-weight:850;color:#187254}
+.dialogue-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:13px}
+.transcript-btn{border:1px solid #b8d2c2;border-radius:99px;background:#fff;color:#1c684c;font-weight:800;padding:9px 12px;font-size:12px}
+.speech-bubble{border:1px solid #dce9e0;background:linear-gradient(145deg,#eff7ed,#fff);padding:22px;border-radius:20px;margin:7px 0 25px}
+.speaker{font-size:13px;font-weight:850;color:#25745a;margin-bottom:12px}
+.speech-bubble .audio-btn{margin:0 0 13px}
+.speech-text{font-size:24px;line-height:1.4;font-weight:800;color:#163e33;margin:7px 0}
+.speech-translation{color:#668371;font-size:14px;margin-top:4px}
+.speech-placeholder{font-size:13px;color:#7b9085;line-height:1.45;max-width:440px}
+.reply-title{font-size:23px;font-weight:850;margin:12px 0 6px}
+.reply-subtitle{font-size:15px;color:#678072;line-height:1.45;margin:0 0 19px}
+.dialogue-tip{color:#587864;font-size:13px}
+.dialogue-finish{text-align:center;padding:28px 24px}
+.dialogue-finish h1{font-size:30px;margin:10px 0}
+.dialogue-finish>p{color:#6b7d71;line-height:1.6}
+.score-pill{display:inline-block;margin:13px auto;padding:9px 18px;border-radius:99px;background:#e9f6ed;color:#166a49;font-weight:850}
+.dialogue-finish .footactions{justify-content:center}
+@media(max-width:800px){.dialogue-grid{grid-template-columns:1fr}.conversation-emoji{font-size:37px}}
+@media(max-width:520px){.dialogue-card{padding:17px}.dialogue-top .smallcap{font-size:10px}.speech-bubble{padding:17px}.speech-text{font-size:21px}.conversation-summary h2{font-size:18px}.conversation-summary{padding:17px}}
+
+.scene-speed{display:flex;align-items:center;gap:10px;justify-content:flex-start;flex-wrap:wrap;margin-bottom:13px}.scene-speed label{font-weight:700;font-size:12px;color:#668170}.scene-speed select{border:1px solid #c9dccc;border-radius:10px;background:#fff;padding:7px 9px;font-weight:700;color:#244f3f;font-size:12px;max-width:100%}
+</style></head><body><div id="app"></div><script>// Deuxième série de micro-leçons : portugais européen, avec des situations orales courantes.
+const extraLessons = [
+  {id:'restaurante',unit:'07',title:'No restaurante',subtitle:'Commander à table',duration:7,icon:'🍽️',description:'Demander une table, choisir un plat et demander l’addition.',exercises:[
+    {kind:'listen',text:'Tem mesa para quatro pessoas?',prompt:'Que demande-t-on ?',options:['Une table pour quatre personnes ?', 'Un ticket pour le bus ?', 'Quatre cafés ?'],answer:'Une table pour quatre personnes ?',meaning:'Vous avez une table pour quatre personnes ?'},
+    {kind:'reply',prompt:'Tu veux voir le menu.',options:['Posso ver a ementa?', 'Onde fica o banco?', 'Quanto tempo demora?'],answer:'Posso ver a ementa?',meaning:'Puis-je voir le menu ?'},
+    {kind:'arrange',prompt:'Construis « L’addition, s’il vous plaît. »',words:['A','conta',',','se','faz','favor','.'],answer:'A conta, se faz favor.',meaning:'L’addition, s’il vous plaît.'},
+    {kind:'speak',text:'Queria reservar uma mesa para esta noite.',meaning:'Je voudrais réserver une table pour ce soir.'}
+  ]},
+  {id:'telefone',unit:'08',title:'Ao telefone',subtitle:'Se faire comprendre',duration:6,icon:'📱',description:'Répondre au téléphone et demander de répéter.',exercises:[
+    {kind:'listen',text:'Estou a ouvir mal.',prompt:'Que veut dire cette phrase ?',options:['Je vous entends mal.', 'Je suis en retard.', 'Je vais vous rappeler demain.'],answer:'Je vous entends mal.',meaning:'Je vous entends mal.'},
+    {kind:'reply',prompt:'Tu souhaites rappeler plus tard.',options:['Posso ligar mais tarde?', 'Tem quartos livres?', 'Estou com fome.'],answer:'Posso ligar mais tarde?',meaning:'Puis-je rappeler plus tard ?'},
+    {kind:'arrange',prompt:'Construis « Vous pouvez répéter ? »',words:['Pode','repetir','?'],answer:'Pode repetir?',meaning:'Vous pouvez répéter ?'},
+    {kind:'speak',text:'Desculpe, a ligação está má.',meaning:'Désolé, la connexion est mauvaise.'}
+  ]},
+  {id:'rotina',unit:'09',title:'O dia a dia',subtitle:'Raconter sa journée',duration:7,icon:'🏠',description:'Parler de son quotidien avec des phrases simples.',exercises:[
+    {kind:'listen',text:'A que horas costumas acordar?',prompt:'Que te demande-t-on ?',options:['À quelle heure te réveilles-tu d’habitude ?', 'Où travailles-tu ?', 'Quel jour sommes-nous ?'],answer:'À quelle heure te réveilles-tu d’habitude ?',meaning:'À quelle heure te réveilles-tu d’habitude ?'},
+    {kind:'reply',prompt:'Tu travailles à la maison aujourd’hui.',options:['Hoje trabalho em casa.', 'O café é perto.', 'Queria uma sopa.'],answer:'Hoje trabalho em casa.',meaning:'Aujourd’hui, je travaille à la maison.'},
+    {kind:'arrange',prompt:'Construis « Je rentre à la maison. »',words:['Vou','para','casa','.'],answer:'Vou para casa.',meaning:'Je rentre à la maison.'},
+    {kind:'speak',text:'Ao fim do dia, gosto de estar com a família.',meaning:'À la fin de la journée, j’aime être avec ma famille.'}
+  ]},
+  {id:'meteorologia',unit:'10',title:'Como está o tempo?',subtitle:'Parler de la météo',duration:6,icon:'⛅',description:'Comprendre les conversations sur le temps qu’il fait.',exercises:[
+    {kind:'listen',text:'Hoje está a chover muito.',prompt:'Quel temps fait-il ?',options:['Il pleut beaucoup.', 'Il fait très chaud.', 'Il neige.'],answer:'Il pleut beaucoup.',meaning:'Aujourd’hui, il pleut beaucoup.'},
+    {kind:'reply',prompt:'Il fait un beau soleil.',options:['Está um dia de sol.', 'Tenho sede.', 'O autocarro chegou.'],answer:'Está um dia de sol.',meaning:'Il fait une journée ensoleillée.'},
+    {kind:'arrange',prompt:'Construis « Il fait froid aujourd’hui. »',words:['Está','frio','hoje','.'],answer:'Está frio hoje.',meaning:'Il fait froid aujourd’hui.'},
+    {kind:'speak',text:'Amanhã vai estar mais quente.',meaning:'Demain, il fera plus chaud.'}
+  ]},
+  {id:'alojamento',unit:'11',title:'No alojamento',subtitle:'À la réception',duration:7,icon:'🛎️',description:'Arriver à l’hôtel et demander des informations utiles.',exercises:[
+    {kind:'listen',text:'A que horas é o pequeno-almoço?',prompt:'Que demande la personne ?',options:['L’heure du petit déjeuner.', 'Le prix du dîner.', 'L’étage de la chambre.'],answer:'L’heure du petit déjeuner.',meaning:'À quelle heure est le petit déjeuner ?'},
+    {kind:'reply',prompt:'Tu as une réservation.',options:['Tenho uma reserva.', 'Preciso de água.', 'Estou a passear.'],answer:'Tenho uma reserva.',meaning:'J’ai une réservation.'},
+    {kind:'arrange',prompt:'Construis « Où se trouve l’ascenseur ? »',words:['Onde','fica','o','elevador','?'],answer:'Onde fica o elevador?',meaning:'Où se trouve l’ascenseur ?'},
+    {kind:'speak',text:'Podia dar-me outra chave, se faz favor?',meaning:'Pourriez-vous me donner une autre clé, s’il vous plaît ?'}
+  ]},
+  {id:'passado',unit:'12',title:'O fim de semana',subtitle:'Raconter au passé',duration:8,icon:'🌊',description:'Expliquer simplement ce que tu as fait et aimé.',exercises:[
+    {kind:'listen',text:'Ontem fomos passear à praia.',prompt:'Qu’avez-vous fait hier ?',options:['Nous sommes allés nous promener à la plage.', 'Nous irons à la plage.', 'Nous travaillons à la maison.'],answer:'Nous sommes allés nous promener à la plage.',meaning:'Hier, nous sommes allés nous promener à la plage.'},
+    {kind:'reply',prompt:'Quelqu’un demande « Gostaste? »',options:['Sim, gostei muito!', 'Até amanhã.', 'São três euros.'],answer:'Sim, gostei muito!',meaning:'Oui, j’ai beaucoup aimé !'},
+    {kind:'arrange',prompt:'Construis « C’était un très beau jour. »',words:['Foi','um','dia','muito','bonito','.'],answer:'Foi um dia muito bonito.',meaning:'C’était un très beau jour.'},
+    {kind:'speak',text:'No domingo, estive com os meus amigos.',meaning:'Dimanche, j’étais avec mes amis.'}
+  ]}
+];
+
+
+// Contenu pédagogique : portugais européen (Portugal) exclusivement.
+// V1 : six micro-leçons, quatre exercices par leçon.
+const baseLessons = [
+  {
+    id: 'ola', unit: '01', title: 'Olá, tudo bem?', subtitle: 'Engager une conversation', duration: 6, icon: '👋',
+    description: 'Saluer naturellement et répondre à une question simple.',
+    exercises: [
+      { kind:'listen', text:'Olá! Tudo bem?', prompt:'Que signifie cette phrase ?', options:['Salut ! Tout va bien ?', 'À quelle heure ?', 'Où vas-tu ?'], answer:'Salut ! Tout va bien ?', meaning:'Salut ! Tout va bien ?' },
+      { kind:'reply', prompt:'Quelqu’un te dit « Tudo bem? ». Que réponds-tu ?', options:['Estou bem, obrigado.', 'Quanto custa?', 'Não sei onde é.'], answer:'Estou bem, obrigado.', meaning:'Je vais bien, merci.' },
+      { kind:'arrange', prompt:'Construis « Et toi ? »', words:['E', 'contigo', '?'], answer:'E contigo?', meaning:'Et toi ?' },
+      { kind:'speak', text:'Estou bem, obrigado. E contigo?', meaning:'Je vais bien, merci. Et toi ?' }
+    ]
+  },
+  {
+    id:'cafe', unit:'02', title:'No café', subtitle:'Commander avec politesse', duration:7, icon:'☕',
+    description:'Commander une boisson au Portugal sans hésiter.',
+    exercises:[
+      {kind:'listen', text:'Queria um café, se faz favor.', prompt:'Qu’entends-tu ?', options:['Je voudrais un café, s’il vous plaît.', 'Je prépare un café.', 'Je paie par carte.'], answer:'Je voudrais un café, s’il vous plaît.', meaning:'Je voudrais un café, s’il vous plaît.'},
+      {kind:'reply', prompt:'On te demande « É para aqui ou para levar? »', options:['Para levar, se faz favor.', 'Vivo em França.', 'Estou cansado.'], answer:'Para levar, se faz favor.', meaning:'À emporter, s’il vous plaît.'},
+      {kind:'arrange', prompt:'Construis « C’est combien ? »', words:['Quanto', 'é', '?'], answer:'Quanto é?', meaning:'C’est combien ?'},
+      {kind:'speak', text:'Queria um café e uma água, se faz favor.', meaning:'Je voudrais un café et une eau, s’il vous plaît.'}
+    ]
+  },
+  {
+    id:'familia', unit:'03', title:'De onde és?', subtitle:'Parler de ses origines', duration:7, icon:'🏡',
+    description:'Expliquer d’où l’on vient et lancer un échange.',
+    exercises:[
+      {kind:'listen',text:'De onde és?',prompt:'Que demande-t-on ?',options:['D’où viens-tu ?', 'Quel âge as-tu ?', 'Où habites-tu maintenant ?'],answer:'D’où viens-tu ?',meaning:'D’où viens-tu ?'},
+      {kind:'reply',prompt:'Quelqu’un demande « De onde és? »', options:['Sou de França.', 'São três horas.', 'Queria pão.'],answer:'Sou de França.',meaning:'Je viens de France.'},
+      {kind:'arrange',prompt:'Construis « Ma famille est portugaise. »',words:['A','minha','família','é','portuguesa','.'],answer:'A minha família é portuguesa.',meaning:'Ma famille est portugaise.'},
+      {kind:'speak',text:'Sou de França, mas a minha família é portuguesa.',meaning:'Je viens de France, mais ma famille est portugaise.'}
+    ]
+  },
+  {
+    id:'devagar',unit:'04',title:'Mais devagar',subtitle:'Oser demander de l’aide',duration:6,icon:'🗣️',
+    description:'Rester dans la conversation même quand elle va trop vite.',
+    exercises:[
+      {kind:'listen',text:'Pode falar mais devagar?',prompt:'Que demande cette personne ?',options:['Pouvez-vous parler plus lentement ?', 'Pouvez-vous répéter demain ?', 'Où est le bus ?'],answer:'Pouvez-vous parler plus lentement ?',meaning:'Pouvez-vous parler plus lentement ?'},
+      {kind:'reply',prompt:'Tu n’as pas compris ce qu’on vient de dire.',options:['Não percebi.', 'Muito prazer.', 'Está fechado.'],answer:'Não percebi.',meaning:'Je n’ai pas compris.'},
+      {kind:'arrange',prompt:'Construis « Pouvez-vous répéter, s’il vous plaît ? »',words:['Pode','repetir',',','se','faz','favor','?'],answer:'Pode repetir, se faz favor?',meaning:'Pouvez-vous répéter, s’il vous plaît ?'},
+      {kind:'speak',text:'Desculpe, estou a aprender português.',meaning:'Excusez-moi, j’apprends le portugais.'}
+    ]
+  },
+  {
+    id:'compras',unit:'05',title:'Nas compras',subtitle:'Faire de petites courses',duration:7,icon:'🛍️',
+    description:'Demander un produit, son prix et payer.',
+    exercises:[
+      {kind:'listen',text:'Quanto custa este pão?',prompt:'Que demande-t-on ?',options:['Combien coûte ce pain ?', 'Où est le pain ?', 'Ce pain est-il frais ?'],answer:'Combien coûte ce pain ?',meaning:'Combien coûte ce pain ?'},
+      {kind:'reply',prompt:'Tu souhaites payer par carte.',options:['Posso pagar com cartão?', 'Onde fica a estação?', 'Está tudo bem.'],answer:'Posso pagar com cartão?',meaning:'Puis-je payer par carte ?'},
+      {kind:'arrange',prompt:'Construis « Vous avez du pain ? »',words:['Tem','pão','?'],answer:'Tem pão?',meaning:'Vous avez du pain ?'},
+      {kind:'speak',text:'Queria meio quilo, se faz favor.',meaning:'Je voudrais un demi-kilo, s’il vous plaît.'}
+    ]
+  },
+  {
+    id:'estacao',unit:'06',title:'Onde fica?',subtitle:'Se déplacer au Portugal',duration:7,icon:'🚆',
+    description:'Demander un chemin et comprendre une information simple.',
+    exercises:[
+      {kind:'listen',text:'Onde fica a estação?',prompt:'Que cherche-t-on ?',options:['La gare', 'La boulangerie', 'Le marché'],answer:'La gare',meaning:'Où se trouve la gare ?'},
+      {kind:'reply',prompt:'Tu veux savoir à quelle heure part le train.',options:['A que horas sai o comboio?', 'É para levar?', 'De onde és?'],answer:'A que horas sai o comboio?',meaning:'À quelle heure part le train ?'},
+      {kind:'arrange',prompt:'Construis « Est-ce loin d’ici ? »',words:['É','longe','daqui','?'],answer:'É longe daqui?',meaning:'Est-ce loin d’ici ?'},
+      {kind:'speak',text:'Queria ir para o Porto, se faz favor.',meaning:'Je voudrais aller à Porto, s’il vous plaît.'}
+    ]
+  }
+];
+const lessons = [...baseLessons, ...extraLessons];
+const phrases = [
+  ['Tudo bem?', 'Tout va bien ?'],
+  ['Estou bem, obrigado.', 'Je vais bien, merci.'],
+  ['E contigo?', 'Et toi ?'],
+  ['Queria um café, se faz favor.', 'Je voudrais un café, s’il vous plaît.'],
+  ['Para levar, se faz favor.', 'À emporter, s’il vous plaît.'],
+  ['Quanto é?', 'C’est combien ?'],
+  ['De onde és?', 'D’où viens-tu ?'],
+  ['Sou de França.', 'Je viens de France.'],
+  ['Pode falar mais devagar?', 'Pouvez-vous parler plus lentement ?'],
+  ['Não percebi.', 'Je n’ai pas compris.'],
+  ['Pode repetir, se faz favor?', 'Pouvez-vous répéter, s’il vous plaît ?'],
+  ['Estou a aprender português.', 'J’apprends le portugais.'],
+  ['Posso pagar com cartão?', 'Puis-je payer par carte ?'],
+  ['Onde fica a estação?', 'Où se trouve la gare ?'],
+  ['A que horas sai o comboio?', 'À quelle heure part le train ?']
+];
+
+// Dialogues scénarisés pour l'oral en portugais européen. Une scène = trois échanges.
+// Les réponses et formulations sont prévues pour le portugais du Portugal (PT-PT).
+const dialogues = [
+  {
+    id:'cafe-dialogue', icon:'☕', title:'Commander au café', location:'Lisbonne', level:'A1', duration:4,
+    description:'Commander, préciser sur place ou à emporter et terminer poliment.',
+    turns:[
+      {role:'Empregado',line:'Bom dia! O que vai ser?',translation:'Bonjour ! Qu’est-ce que ce sera ?', question:'Comment commandes-tu un café ?',choices:['Queria um café, se faz favor.','Estou à espera do comboio.','Sou de França.'],correct:0,meaning:'Je voudrais un café, s’il vous plaît.',tip:'« Queria » est une façon très courante et polie de commander.'},
+      {role:'Empregado',line:'É para aqui ou para levar?',translation:'C’est sur place ou à emporter ?',question:'Tu restes sur place.',choices:['Vou para casa.','É para aqui, obrigado.','Fica muito longe.'],correct:1,meaning:'C’est pour ici, merci.',tip:'« Para aqui » signifie sur place, « para levar » à emporter.'},
+      {role:'Empregado',line:'Mais alguma coisa?',translation:'Autre chose ?',question:'Tu n’as besoin de rien d’autre.',choices:['Não, é tudo. Obrigado.','Gosto de passear.','Não falo inglês.'],correct:0,meaning:'Non, c’est tout. Merci.',tip:'« É tudo » sert très souvent à terminer une commande.'}
+    ]
+  },
+  {
+    id:'familia-dialogue', icon:'🏡', title:'Repas en famille', location:'Porto', level:'A1+', duration:5,
+    description:'Répondre simplement quand la famille prend de tes nouvelles.',
+    turns:[
+      {role:'Familiar',line:'Então, como tens passado?',translation:'Alors, comment vas-tu ces derniers temps ?',question:'Tu vas bien.',choices:['Tenho estado bem, obrigado.','Vou de comboio.','Está muito caro.'],correct:0,meaning:'Je vais bien ces derniers temps, merci.',tip:'« Como tens passado? » est une manière naturelle de prendre des nouvelles.'},
+      {role:'Familiar',line:'Vens cá muitas vezes?',translation:'Tu viens ici souvent ?',question:'Tu viens dès que tu peux.',choices:['Sou de Lisboa.','Venho sempre que posso.','Estou com fome.'],correct:1,meaning:'Je viens chaque fois que je peux.',tip:'« Sempre que posso » = chaque fois que je peux.'},
+      {role:'Familiar',line:'Queres mais um bocadinho?',translation:'Tu en veux encore un petit peu ?',question:'Tu en reprendrais volontiers un peu.',choices:['Fica à direita.','São duas horas.','Sim, só mais um bocadinho, obrigado.'],correct:2,meaning:'Oui, juste un petit peu de plus, merci.',tip:'« Um bocadinho » s’entend très souvent au Portugal.'}
+    ]
+  },
+  {
+    id:'porto-dialogue', icon:'🚉', title:'Trouver son chemin', location:'Porto', level:'A1+', duration:5,
+    description:'Demander la gare São Bento et comprendre une durée.',
+    turns:[
+      {role:'Passante',line:'Desculpe, precisa de ajuda?',translation:'Excusez-moi, avez-vous besoin d’aide ?',question:'Tu cherches la gare de São Bento.',choices:['Sim, onde fica a estação de São Bento?','A conta, se faz favor.','Tenho um irmão.'],correct:0,meaning:'Oui, où se trouve la gare de São Bento ?',tip:'« Onde fica…? » est une des questions les plus utiles.'},
+      {role:'Passante',line:'É perto. Pode ir a pé.',translation:'C’est près. Vous pouvez y aller à pied.',question:'Tu demandes combien de temps il faut.',choices:['Quanto tempo demora?','É para levar?','Fica aberto ao domingo?'],correct:0,meaning:'Combien de temps ça prend ?',tip:'« A pé » = à pied ; « demora » = ça prend du temps.'},
+      {role:'Passante',line:'Uns dez minutos.',translation:'Environ dix minutes.',question:'Tu remercies la personne.',choices:['Não percebi nada.','Muito obrigado pela ajuda!','Não quero café.'],correct:1,meaning:'Merci beaucoup pour votre aide !',tip:'« Pela ajuda » = pour votre aide.'}
+    ]
+  },
+  {
+    id:'mercado-dialogue', icon:'🍎', title:'Au marché', location:'Braga', level:'A1', duration:4,
+    description:'Acheter des fruits, poser une question et régler.',
+    turns:[
+      {role:'Vendedor',line:'Bom dia, deseja alguma coisa?',translation:'Bonjour, vous désirez quelque chose ?',question:'Tu veux un demi-kilo de pommes.',choices:['Fica ao lado.','Queria meio quilo de maçãs.','Não sei nadar.'],correct:1,meaning:'Je voudrais un demi-kilo de pommes.',tip:'« Meio quilo » = un demi-kilo.'},
+      {role:'Vendedor',line:'Mais alguma coisa?',translation:'Autre chose ?',question:'Tu demandes s’il y a des oranges.',choices:['Tem laranjas?','Sou francês.','São os meus filhos.'],correct:0,meaning:'Vous avez des oranges ?',tip:'« Tem…? » permet de demander si quelque chose est disponible.'},
+      {role:'Vendedor',line:'São dois euros e cinquenta.',translation:'Ça fait deux euros cinquante.',question:'Tu veux payer par carte.',choices:['Pode falar mais devagar?','Posso pagar com cartão?','Onde fica o hotel?'],correct:1,meaning:'Puis-je payer par carte ?',tip:'« Com cartão » = par carte.'}
+    ]
+  },
+  {
+    id:'hotel-dialogue', icon:'🛎️', title:'Arriver à l’hôtel', location:'Coimbra', level:'A2', duration:5,
+    description:'Confirmer une réservation et répondre à la réception.',
+    turns:[
+      {role:'Rececionista',line:'Boa tarde. Tem uma reserva?',translation:'Bonjour. Vous avez une réservation ?',question:'Tu as une réservation au nom de Silva.',choices:['Tenho frio.','O autocarro chega cedo.','Sim, tenho uma reserva em nome de Silva.'],correct:2,meaning:'Oui, j’ai une réservation au nom de Silva.',tip:'« Em nome de » = au nom de.'},
+      {role:'Rececionista',line:'Quantas noites vai ficar?',translation:'Combien de nuits allez-vous rester ?',question:'Tu restes trois nuits.',choices:['Vou ficar três noites.','Tenho três irmãos.','Vou comprar três cafés.'],correct:0,meaning:'Je vais rester trois nuits.',tip:'« Vou ficar » = je vais rester.'},
+      {role:'Rececionista',line:'Quer dois cartões?',translation:'Vous voulez deux cartes ?',question:'Tu acceptes poliment.',choices:['Não tenho a certeza.','Sim, se faz favor.','É muito longe.'],correct:1,meaning:'Oui, s’il vous plaît.',tip:'« Se faz favor » est une formule de politesse essentielle.'}
+    ]
+  },
+  {
+    id:'weekend-dialogue', icon:'🌤️', title:'Raconter son week-end', location:'Aveiro', level:'A2', duration:6,
+    description:'Participer à une conversation plus naturelle au passé.',
+    turns:[
+      {role:'Amigo',line:'Então, que tal foi o fim de semana?',translation:'Alors, comment s’est passé le week-end ?',question:'Tu as passé du temps avec ta famille.',choices:['Foi ótimo, estive com a família.','Vou para o trabalho.','É muito cedo.'],correct:0,meaning:'C’était super, j’étais avec la famille.',tip:'« Foi » et « estive » parlent ici d’un moment passé.'},
+      {role:'Amigo',line:'E o que fizeram?',translation:'Et qu’est-ce que vous avez fait ?',question:'Vous êtes allés vous promener au bord de la mer.',choices:['Temos fome.','Fomos passear à beira-mar.','Vou estudar amanhã.'],correct:1,meaning:'Nous sommes allés nous promener au bord de la mer.',tip:'« Fomos » est le passé de « ir » pour « nós ».'},
+      {role:'Amigo',line:'Gostaste?',translation:'Tu as aimé ?',question:'Oui, il faisait très beau.',choices:['Gostei muito. Estava um dia lindo.','É para levar.','Tenho de ir embora.'],correct:0,meaning:'J’ai beaucoup aimé. Il faisait une très belle journée.',tip:'« Gostaste? » et « Gostei » sont utiles pour parler de son ressenti.'}
+    ]
+  }
+];
+
+
+
+
+const KEY = 'fala-pt-v1';
+const DEFAULT = { completed: {}, mistakes: {}, dialogues: {}, xp: 0, days: {}, voice: '', speed: 0.85 };
+let state = loadState();
+let page = 'home', active = null, step = 0, selected = null, selectedIndex = -1, order = [], attempts = 0, locked = false;
+let reviewIndex = 0, showAnswer = false;
+let scene = null, sceneStep = 0, sceneChosen = -1, sceneLocked = false, sceneScore = 0, showTranscript = false, practiceMode = 'dialogues';
+const app = document.querySelector('#app');
+const menus = [ ['home','⌂','Accueil'], ['learn','▦','Apprendre'], ['practice','◉','Pratiquer'], ['review','↻','Réviser'], ['profile','♙','Profil'] ];
+
+function loadState() { try { const data = JSON.parse(localStorage.getItem(KEY)); return { ...DEFAULT, ...data, completed: data?.completed || {}, mistakes: data?.mistakes || {}, dialogues: data?.dialogues || {}, days: data?.days || {} }; } catch { return structuredClone(DEFAULT); } }
+function save(){try{localStorage.setItem(KEY, JSON.stringify(state));}catch{toast('Sauvegarde locale indisponible.');}}
+function dateKey(){return new Date().toLocaleDateString('sv-SE');}
+function dailyDone(){return state.days[dateKey()]||0;}
+function percent(){return Math.round(Object.keys(state.completed).length/lessons.length*100);}
+function escapeHtml(x){return String(x).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function toast(msg){let el=document.querySelector('#toast'); if(!el){el=document.createElement('div');el.id='toast';el.className='toast';document.body.append(el);}el.textContent=msg;el.classList.remove('hide');clearTimeout(toast.t);toast.t=setTimeout(()=>el.classList.add('hide'),3700);}
+function button(label, on, cl='btn'){return `<button class="${cl}" data-action="${on}">${label}</button>`;}
+function shell(content){return `<div class="shell"><aside class="sidebar"><div class="brand"><div class="logo">F.</div><div><div class="brand-name">Fala PT</div><div class="brand-sub">PORTUGAL • PT-PT</div></div></div><nav class="nav-list">${menus.map(([id,icon,name])=>`<button class="nav-btn ${page===id?'active':''}" data-action="nav:${id}"><span>${icon}</span>${name}</button>`).join('')}</nav><div class="sidebar-foot"><strong>🇵🇹 Português de Portugal</strong>Des expressions naturelles, des leçons courtes et beaucoup de pratique orale.</div></aside><main class="main"><div class="wrap"><div class="topline"><div class="brand-mini"><div class="logo">F.</div>Fala PT</div><span class="eyebrow" style="display:${window.innerWidth>680?'block':'none'}">O teu português começa aqui</span><span class="pill">✦ ${state.xp} XP</span></div>${content}</div></main></div><nav class="bottom-nav">${menus.map(([id,icon,name])=>`<button class="${page===id?'selected':''}" data-action="nav:${id}"><span>${icon}</span>${name}</button>`).join('')}</nav>`;}
+function stats(){return `<div class="stat-grid"><div class="stat"><div class="slabel">Leçons maîtrisées</div><div class="svalue">${Object.keys(state.completed).length}<span style="font-size:15px;color:#a7b3a9"> / ${lessons.length}</span></div><div class="sfoot">Parcours découverte</div></div><div class="stat"><div class="slabel">Points gagnés</div><div class="svalue">${state.xp}</div><div class="sfoot">XP cumulés</div></div><div class="stat"><div class="slabel">Aujourd’hui</div><div class="svalue">${dailyDone()}<span style="font-size:15px;color:#a7b3a9"> / 1</span></div><div class="sfoot">Leçon quotidienne</div></div></div>`;}
+function lessonCard(l){return `<button class="lesson" data-action="start:${l.id}"><div class="lesson-icon">${l.icon}</div><div class="lesson-content"><div class="lesson-meta">LEÇON ${l.unit} · ${l.duration} MIN ${state.completed[l.id]?' · ✓ TERMINÉE':''}</div><div class="lesson-title">${escapeHtml(l.title)}</div><div class="lesson-desc">${escapeHtml(l.description)}</div><div class="lesson-end">${state.completed[l.id]?'Recommencer ↗':'Commencer →'}</div></div></button>`;}
+function home(){const next = lessons.find(l=>!state.completed[l.id])||lessons[0];return `<section class="hero"><div class="hero-inner"><span class="chip">🇵🇹 PORTUGAIS DU PORTUGAL</span><h1>Fala português,<br><span class="hero-accent">naturalmente.</span></h1><p>Écoute, comprends et réponds comme dans une vraie conversation. Quelques minutes par jour suffisent pour prendre confiance.</p>${button(`▶ Continuer : ${escapeHtml(next.title)}`,'start:'+next.id)}</div><div class="hero-decor">💬</div></section>${stats()}<div class="section-head"><div><h2>Ton prochain pas</h2><p>Des situations utiles dès le premier jour.</p></div>${button('Voir tout →','nav:learn','mini-link')}</div><div class="lesson-grid">${lessons.filter(l=>!state.completed[l.id]).concat(lessons.filter(l=>state.completed[l.id])).slice(0,2).map(lessonCard).join('')}</div><div class="section-head"><div><h2>Entraînement oral</h2><p>Apprends à réagir spontanément.</p></div></div><div class="boxcard"><div class="smallcap">DIALOGUES GUIDÉS</div><h2 style="margin:5px 0 8px;font-size:21px">Parle dans de vraies situations</h2><p class="muted" style="line-height:1.5;font-size:14px">Six conversations courtes avec écoute, réponses et corrections.</p>${button("💬 Commencer une conversation","nav:practice","btn secondary")}</div><div class="section-head"><div><h2>Petit conseil</h2></div></div><div class="boxcard" style="line-height:1.6"><strong>🎧 Écoute deux fois, puis parle.</strong><p class="muted" style="font-size:13px;margin-bottom:0">Tu peux écouter une phrase avant de lire sa traduction. Répète-la à haute voix en imitant le rythme du portugais européen.</p></div>`;}
+function learn(){return `<div class="subhero"><span class="eyebrow">LE PARCOURS A1 — CONVERSATIONS ESSENTIELLES</span><h1>Apprendre en situation</h1><p>Douze leçons pour entrer dans une conversation au Portugal. Tu peux les reprendre autant de fois que nécessaire.</p></div><div class="boxcard"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:11px"><strong>Ta progression</strong><span class="muted" style="font-size:12px">${percent()} %</span></div><div class="progress-bar"><div style="width:${percent()}%"></div></div></div><div class="section-head"><div><h2>Premières conversations</h2><p>Écouter · Répondre · Construire · Répéter</p></div></div><div class="lesson-grid">${lessons.map(lessonCard).join('')}</div>`;}
+function practice(){
+  if(scene) return dialoguePlayer();
+  const complete = Object.keys(state.dialogues).length;
+  const intro = `<div class="subhero"><span class="eyebrow">PARLER & COMPRENDRE • PT-PT</span><h1>Ton atelier oral</h1><p>Des échanges du quotidien à écouter avant de répondre. Choisis les mots que tu utiliserais dans une vraie conversation.</p></div>`;
+  const tabs = `<div class="practice-tabs" role="group" aria-label="Type de pratique"><button class="${practiceMode==='dialogues'?'on':''}" data-action="practice-mode:dialogues">💬 Dialogues guidés</button><button class="${practiceMode==='phrases'?'on':''}" data-action="practice-mode:phrases">🎧 Expressions utiles</button></div>`;
+  if(practiceMode==='phrases')return `${intro}${tabs}<div class="boxcard"><div class="smallcap">ÉCOUTE ET IMITATION</div><h2 style="font-size:20px;margin:0 0 15px">15 phrases vraiment utiles</h2>${phrases.map(([pt,fr])=>`<div class="listphrase"><div><strong lang="pt-PT">${escapeHtml(pt)}</strong><small>${escapeHtml(fr)}</small></div><button class="mini-audio" data-say="${escapeHtml(pt)}" aria-label="Écouter la phrase">▶ Écouter</button></div>`).join('')}</div><div class="note">Les phrases sont prononcées par la voix de synthèse PT-PT de ton appareil, si elle est installée. Il n’y a pas encore de correction automatique de la prononciation.</div>`;
+  return `${intro}${tabs}<div class="boxcard conversation-summary"><div><span class="smallcap">TON ENTRAÎNEMENT</span><h2>${complete} / ${dialogues.length} conversations terminées</h2><p>Écoute d’abord, puis choisis ce que tu dirais. Tu peux afficher la transcription à tout moment.</p></div><div class="conversation-emoji" aria-hidden="true">🇵🇹</div></div><div class="section-head"><div><h2>Parler en situation</h2><p>Six scènes progressives, du café aux conversations du quotidien.</p></div></div><div class="dialogue-grid">${dialogues.map(d=>`<button class="dialogue-card" data-action="scene-start:${d.id}"><div class="dialogue-icon" aria-hidden="true">${d.icon}</div><div class="dialogue-body"><div class="smallcap">${escapeHtml(d.location)} · ${escapeHtml(d.level)} · ${d.duration} MIN</div><h3>${escapeHtml(d.title)}</h3><p>${escapeHtml(d.description)}</p><span class="dialogue-go">${state.dialogues[d.id]?'✓ Refaire la conversation':'Commencer le dialogue →'}</span></div></button>`).join('')}</div><div class="note">La synthèse vocale dépend des voix installées sur ton appareil. Les situations sont scénarisées et n’utilisent pas de conversation générée par IA.</div>`;
+}
+function dialoguePlayer(){
+  const total=scene.turns.length;
+  if(sceneStep>=total)return `<div class="exercise"><div class="boxcard dialogue-finish"><div class="recap">🎉</div><h1>Muito bem!</h1><p>Tu as terminé « ${escapeHtml(scene.title)} ».</p><div class="score-pill">${sceneScore} bonne(s) réponse(s) sur ${total}</div><p class="muted">Tu peux refaire cette conversation pour gagner en aisance. Parle à voix haute après chaque réplique.</p><div class="footactions">${button('Refaire la conversation','scene-replay','btn secondary')}${button('Autres dialogues →','scene-exit')}</div></div></div>`;
+  const turn=scene.turns[sceneStep];
+  const choices=turn.choices.map((opt,i)=>`<button data-action="scene-choose:${i}" class="option ${sceneLocked&&i===turn.correct?'good':''} ${sceneLocked&&i===sceneChosen&&i!==turn.correct?'bad':''}" ${sceneLocked?'disabled':''} lang="pt-PT">${escapeHtml(opt)}</button>`).join('');
+  const feedback=sceneLocked?`<div class="feedback ${sceneChosen===turn.correct?'':'error'}" role="status"><div class="fbtitle">${sceneChosen===turn.correct?'Muito bem !':'À retenir'}</div><strong lang="pt-PT">${escapeHtml(turn.choices[turn.correct])}</strong><p>${escapeHtml(turn.meaning)}</p><p class="dialogue-tip">💡 ${escapeHtml(turn.tip)}</p><button class="mini-audio" data-say="${escapeHtml(turn.choices[turn.correct])}">▶ Écouter ma réponse</button></div><div class="footactions">${button(sceneStep===total-1?'Terminer la conversation →':'Échange suivant →','scene-next')}</div>`:'';
+  return `<div class="exercise dialogue-player"><div class="exhead"><button class="back" data-action="scene-exit" aria-label="Retour aux dialogues">←</button><div class="exhead-main"><div class="exhead-label">${escapeHtml(scene.title)} · Échange ${sceneStep+1} / ${total}</div><div class="progress-bar"><div style="width:${(sceneStep+1)/total*100}%"></div></div></div></div><div class="dialogue-top"><span class="smallcap">🎧 ÉCOUTE AVANT DE LIRE</span><button class="transcript-btn" data-action="scene-transcript" aria-pressed="${showTranscript}">${showTranscript?'Masquer le texte':'Voir la transcription'}</button></div><div class="speech-bubble"><div class="speaker">${escapeHtml(turn.role)} · ${escapeHtml(scene.location)}</div><button class="audio-btn" data-say="${escapeHtml(turn.line)}">▶ Écouter la réplique · PT-PT</button><div class="scene-speed"><label for="speed-select">Vitesse d’écoute</label><select id="speed-select"><option value="0.7" ${state.speed===0.7?'selected':''}>Lente · 70 %</option><option value="0.85" ${state.speed===0.85?'selected':''}>Apprentissage · 85 %</option><option value="1" ${state.speed===1?'selected':''}>Normale · 100 %</option></select></div>${showTranscript?`<div class="speech-text" lang="pt-PT">${escapeHtml(turn.line)}</div><div class="speech-translation">${escapeHtml(turn.translation)}</div>`:`<div class="speech-placeholder">La phrase est masquée pour entraîner ton oreille. Réécoute ou affiche la transcription.</div>`}</div><div class="reply-title">À toi de répondre !</div><p class="reply-subtitle">${escapeHtml(turn.question)}</p><div class="options">${choices}</div>${feedback}<div class="note">Répète ta réponse à voix haute. La prononciation n’est pas évaluée automatiquement.</div></div>`;
+}
+function startScene(id){
+  scene=dialogues.find(d=>d.id===id);
+  if(!scene)return;
+  sceneStep=0;sceneScore=0;sceneChosen=-1;sceneLocked=false;showTranscript=false;
+  active=null;page='practice';render();window.scrollTo(0,0);
+}
+function nextScene(){
+  if(!scene||!sceneLocked)return;
+  if(sceneStep===scene.turns.length-1){
+    const prev=state.dialogues[scene.id];
+    state.dialogues[scene.id]={completed:Date.now(),best:Math.max(sceneScore,prev?.best||0),plays:(prev?.plays||0)+1};
+    if(!prev)award(30);
+    save();
+  }
+  sceneStep++;sceneChosen=-1;sceneLocked=false;
+  render();window.scrollTo(0,0);
+}
+function review(){const difficult = Object.entries(state.mistakes).sort((a,b)=>b[1].count-a[1].count).map(([text,v])=>[text,v.meaning]);const deck=[...difficult,...phrases.filter(([p])=>!state.mistakes[p])];if(reviewIndex>=deck.length)reviewIndex=0;const card=deck[reviewIndex];return `<div class="subhero"><span class="eyebrow">MÉMORISER</span><h1>Réviser intelligemment</h1><p>${difficult.length?`${difficult.length} expression(s) à retravailler en priorité.`:'Commence par ces phrases utiles. Tes erreurs remonteront en haut de la liste.'}</p></div><div class="boxcard flashcard"><div class="smallcap">CARTE ${reviewIndex+1} / ${deck.length}</div><div class="port" lang="pt-PT">${escapeHtml(card[0])}</div>${showAnswer?`<div class="trans">${escapeHtml(card[1])}</div>`:`<div class="muted">À ton avis, que signifie cette phrase ?</div>`}<div class="review-actions"><button class="mini-audio" data-say="${escapeHtml(card[0])}">▶ Écouter</button>${button(showAnswer?'Carte suivante →':'Voir la traduction','flip')}</div></div><div class="note">V1 : les erreurs passent en priorité. Un véritable calendrier de répétition espacée est prévu pour la version suivante.</div>`;}
+function profile(){const voiceOptions=getPtVoices();return `<div class="subhero"><span class="eyebrow">TON PROFIL</span><h1>À ton rythme</h1><p>Pour cette première version, tes résultats sont enregistrés uniquement dans ce navigateur, sur cet appareil.</p></div>${stats()}<div class="boxcard"><h2 style="margin:0 0 9px;font-size:20px">Préférences audio</h2><div class="switchrow"><div><strong>Voix portugaise (Portugal)</strong><div class="muted" style="font-size:12px;margin-top:5px">Voix installées sur ton appareil</div></div><select id="voice-select"><option value="">Choix automatique (PT-PT)</option>${voiceOptions.map(v=>`<option value="${escapeHtml(v.name)}" ${state.voice===v.name?'selected':''}>${escapeHtml(v.name)}</option>`).join('')}</select></div><div class="switchrow"><div><strong>Vitesse de lecture</strong><div class="muted" style="font-size:12px;margin-top:5px">Plus lent au début</div></div><select id="speed-select"><option value="0.7" ${state.speed===0.7?'selected':''}>Lente</option><option value="0.85" ${state.speed===0.85?'selected':''}>Normale lente</option><option value="1" ${state.speed===1?'selected':''}>Normale</option></select></div><div style="margin-top:19px">${button('▶ Tester la voix','voice-test','btn secondary')}</div></div><div class="note">${voiceOptions.length?'Une ou plusieurs voix PT-PT sont détectées dans ton navigateur.':'Aucune voix PT-PT n’est détectée pour le moment. Vérifie les voix disponibles dans les réglages de synthèse vocale de ton appareil.'}</div><div class="boxcard"><strong>Sauvegarde et confidentialité</strong><p class="muted" style="font-size:13px;line-height:1.5">Aucun compte, aucune donnée envoyée à un serveur et aucune reconnaissance vocale dans la V1. Effacer les données de ce site supprimera ta progression.</p>${button('Réinitialiser ma progression','reset','btn ghost')}</div>`;}
+function currentTask(){return active?.exercises[step];}
+function exercise(){const ex=currentTask(), l=active, isAudio=ex.kind==='listen'||ex.kind==='speak';const typeLabel={listen:'Écoute et compréhension',reply:'Choisir la bonne réponse',arrange:'Construire une phrase',speak:'Parler à haute voix'}[ex.kind];let body='';if(isAudio)body=`<button class="audio-btn" data-say="${escapeHtml(ex.text)}">▶ Écouter en portugais · PT-PT</button>`;if(ex.kind==='listen'||ex.kind==='reply')body+=`<div class="options">${ex.options.map((o,i)=>`<button data-action="choose:${i}" class="option ${selectedIndex===i?'selected':''} ${locked&&o===ex.answer?'good':''} ${locked&&selectedIndex===i&&o!==ex.answer?'bad':''}" ${locked?'disabled':''}>${escapeHtml(o)}</button>`).join('')}</div>`;if(ex.kind==='arrange')body+=`<div class="smallcap">TA PHRASE</div><div class="answerline">${order.map((id,i)=>`<button class="word" data-action="remove:${i}">${escapeHtml(ex.words[id])}</button>`).join('')}</div><div class="smallcap">TOUCHE LES MOTS DANS L’ORDRE</div><div class="wordbank">${ex.words.map((w,i)=>`<button class="word" data-action="word:${i}" ${order.includes(i)?'disabled':''}>${escapeHtml(w)}</button>`).join('')}</div>`;if(ex.kind==='speak')body+=`<div class="boxcard" style="margin:6px 0 15px;background:#f5f8f4"><div class="smallcap">RÉPÈTE CETTE PHRASE</div><div style="font-size:24px;font-weight:800;line-height:1.35" lang="pt-PT">${escapeHtml(ex.text)}</div><p style="font-size:14px;color:#688170">${escapeHtml(ex.meaning)}</p></div><div class="note">Écoute puis répète trois fois, en imitant le rythme. Autoévalue-toi : l'application ne vérifie pas encore la prononciation.</div>`;if(!locked&&ex.kind==='speak')body+=`<div class="footactions">${button('🔁 Je dois encore pratiquer','speak-retry','btn secondary')}${button('✓ Je l’ai répété','speak-done')}</div>`;let controls='';if(!locked&&ex.kind==='arrange')controls=`<div class="footactions">${button('Effacer','clear','btn secondary')}${button('Vérifier la phrase','check')}</div>`;if(locked)controls=`<div class="feedback ${selected===false?'error':''}"><div class="fbtitle">${selected===false?'Presque !':'Très bien !'}</div>${escapeHtml(ex.meaning||'Tu as terminé cette étape.')} ${selected===false?`<div style="margin-top:6px">Bonne réponse : <strong>${escapeHtml(ex.answer||ex.text)}</strong></div>`:''}</div><div class="footactions">${button(step===l.exercises.length-1?'Terminer la leçon →':'Continuer →','next')}</div>`;const q=ex.kind==='speak'?'À toi de parler !':ex.kind==='listen'?'Écoute et choisis le bon sens':ex.prompt;return `<div class="exercise"><div class="exhead"><button class="back" data-action="nav:learn" aria-label="Retour aux leçons">←</button><div class="exhead-main"><div class="exhead-label">${escapeHtml(l.title)} · Étape ${step+1} / ${l.exercises.length}</div><div class="progress-bar"><div style="width:${(step+1)/l.exercises.length*100}%"></div></div></div></div><div class="smallcap">${typeLabel}</div><h1 class="question">${escapeHtml(q)}</h1>${body}${controls}</div>`;}
+function finished(){const l=active;return `<div class="exercise"><div class="boxcard" style="text-align:center;padding:31px 20px"><div class="recap">🎉</div><h1 class="question">Muito bem!</h1><p class="muted">Tu as terminé « ${escapeHtml(l.title)} ». Un petit pas de plus vers des conversations naturelles !</p><div class="stat-grid"><div class="stat"><div class="slabel">Leçon</div><div class="svalue">✓</div></div><div class="stat"><div class="slabel">Exercices</div><div class="svalue">${l.exercises.length}</div></div><div class="stat"><div class="slabel">Progression</div><div class="svalue">${percent()}%</div></div></div>${button('Retour aux leçons','nav:learn','btn wide')}</div></div>`;}
+function render(){app.innerHTML=shell(active?(step>=active.exercises.length?finished():exercise()):page==='home'?home():page==='learn'?learn():page==='practice'?practice():page==='review'?review():profile());document.title=`Fala PT — ${active?active.title:menus.find(m=>m[0]===page)?.[2]}`;}
+function start(id){active=lessons.find(l=>l.id===id);if(!active)return;step=0;resetExercise();render();window.scrollTo(0,0);}
+function resetExercise(){selected=null;selectedIndex=-1;order=[];attempts=0;locked=false;}
+function mistake(ex){const text=ex.text||ex.answer;const val=state.mistakes[text]||{count:0,meaning:ex.meaning||''};val.count++;state.mistakes[text]=val;save();}
+function award(n=10){state.xp+=n;save();}
+function verify(correct){if(locked)return;locked=true;selected=correct?true:false;if(correct)award(attempts?5:10);else mistake(currentTask());render();}
+function completedLesson(){if(!state.completed[active.id]){state.completed[active.id]=Date.now();const key=dateKey();state.days[key]=(state.days[key]||0)+1;award(20);}save();step=active.exercises.length;render();}
+function getPtVoices(){if(!('speechSynthesis' in window))return [];return speechSynthesis.getVoices().filter(v=>v.lang.toLowerCase().replace('_','-')==='pt-pt');}
+function say(text){if(!('speechSynthesis' in window)){toast('Lecture vocale indisponible dans ce navigateur.');return;}const list=getPtVoices();const voice=list.find(v=>v.name===state.voice)||list[0];if(!voice){toast('Aucune voix PT-PT disponible. Vérifie les voix installées sur ton appareil.');return;}speechSynthesis.cancel();const utt=new SpeechSynthesisUtterance(text);utt.lang='pt-PT';utt.voice=voice;utt.rate=state.speed;utt.pitch=1;speechSynthesis.speak(utt);}
+app.addEventListener('click', e=>{const audio=e.target.closest('[data-say]');if(audio){say(audio.dataset.say);return;}const btn=e.target.closest('[data-action]');if(!btn)return;const [action,payload]=btn.dataset.action.split(':');if(action==='nav'){active=null;scene=null;page=payload;render();window.scrollTo(0,0);return;}if(action==='start'){start(payload);return;}if(action==='flip'){if(showAnswer){reviewIndex++;showAnswer=false;}else showAnswer=true;render();return;}if(action==='practice-mode'){practiceMode=payload;scene=null;render();return;}
+  if(action==='scene-start'){startScene(payload);return;}
+  if(action==='scene-exit'){scene=null;page='practice';render();window.scrollTo(0,0);return;}
+  if(action==='scene-replay'){startScene(scene.id);return;}
+  if(action==='scene-transcript'){if(scene){showTranscript=!showTranscript;render();}return;}
+  if(action==='scene-choose'){if(!scene||sceneLocked)return;const turn=scene.turns[sceneStep];const n=Number(payload);if(!Number.isInteger(n)||n<0||n>=turn.choices.length)return;sceneChosen=n;sceneLocked=true;if(n===turn.correct){sceneScore++;}else mistake({text:turn.choices[turn.correct],meaning:turn.meaning});render();return;}
+  if(action==='scene-next'){nextScene();return;}
+  if(action==='voice-test'){say('Olá! Tudo bem? Estou a aprender português.');return;}if(action==='reset'){if(confirm('Effacer la progression enregistrée sur cet appareil ?')){state=structuredClone(DEFAULT);save();render();}return;}if(!active)return;const ex=currentTask();if(action==='choose'){if(locked)return;const idx=Number(payload);if(idx!==selected&&selected!==null&&typeof selected==='number')attempts++;selected=idx;selectedIndex=idx;const isCorrect=ex.options[idx]===ex.answer;verify(isCorrect);return;}if(action==='word'){if(!order.includes(Number(payload))&&!locked){order.push(Number(payload));render();}return;}if(action==='remove'){if(!locked){order.splice(Number(payload),1);render();}return;}if(action==='clear'){order=[];render();return;}if(action==='check'){if(!order.length){toast('Choisis d’abord quelques mots.');return;}const answer=order.map(i=>ex.words[i]).join(' ').replace(/\s+([.,!?])/g,'$1');verify(answer===ex.answer);return;}if(action==='speak-retry'){mistake(ex);toast('La phrase est ajoutée à tes révisions. Réécoute et réessaie.');return;}if(action==='speak-done'){verify(true);return;}if(action==='next'){if(step===active.exercises.length-1){completedLesson();return;}step++;resetExercise();render();window.scrollTo(0,0);return;}});
+app.addEventListener('change',e=>{if(e.target.id==='voice-select'){state.voice=e.target.value;save();}if(e.target.id==='speed-select'){state.speed=Number(e.target.value);save();}});
+if('speechSynthesis' in window){speechSynthesis.addEventListener?.('voiceschanged',()=>{if(page==='profile'&&!active)render();});}
+render();
+</script></body></html>
