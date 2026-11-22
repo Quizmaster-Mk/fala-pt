@@ -88,5 +88,28 @@
     if(accent)return {status:'minor',accepted,canonical:exercise.answer,matched:accent,tip:exercise.tip||'',message:'La phrase est correcte dans le fond. Vérifie les accents et signes écrits.'};
     return {status:'unverified',accepted,canonical:exercise.answer,tip:exercise.tip||'',message:'Cette formulation n’est pas encore dans les réponses reconnues. Elle peut être valable : compare avec les exemples.'};
   }
-  root.FalaWriting = {writtenTasks,evaluate,comparable};
+  const existingAlternatives = {
+    'Estou bem, obrigado. E contigo?':['Estou bem, obrigada. E contigo?','Estou bem, obrigado. E tu?','Estou bem, obrigada. E tu?'],
+    'Queria um café e uma água, se faz favor.':['Queria um café e uma água, por favor.','Gostaria de um café e de uma água, se faz favor.'],
+    'Sou de França, mas a minha família é portuguesa.':['Sou de França, mas tenho família portuguesa.'],
+    'Desculpe, estou a aprender português.':['Peço desculpa, estou a aprender português.'],
+    'Queria meio quilo, se faz favor.':['Queria meio quilo, por favor.'],
+    'Queria ir para o Porto, se faz favor.':['Gostaria de ir para o Porto, se faz favor.'],
+    'Queria reservar uma mesa para esta noite.':['Gostaria de reservar uma mesa para esta noite.'],
+    'Desculpe, a ligação está má.':['Peço desculpa, a ligação está má.'],
+    'Ao fim do dia, gosto de estar com a família.':['No fim do dia, gosto de estar com a família.'],
+    'Amanhã vai estar mais quente.':['Amanhã estará mais quente.'],
+    'Podia dar-me outra chave, se faz favor?':['Poderia dar-me outra chave, se faz favor?','Podia dar-me outra chave, por favor?'],
+    'No domingo, estive com os meus amigos.':['Estive com os meus amigos no domingo.'],
+    'Embora seja difícil, quero continuar a aprender.':['Apesar de ser difícil, quero continuar a aprender.'],
+    'Se houver outro horário, prefiro sair mais cedo.':['Se existir outro horário, prefiro sair mais cedo.'],
+    'Se pudesse, passava mais tempo em Portugal.':['Se pudesse, passaria mais tempo em Portugal.'],
+    'Estou a tentar conciliar o trabalho com a vida familiar.':['Tento conciliar o trabalho com a vida familiar.'],
+    'Prefiro pensar melhor antes de tomar uma decisão.':['Prefiro refletir antes de tomar uma decisão.']
+  };
+  function acceptable(exercise) {
+    return {...exercise,answer:exercise.answer||exercise.text,
+      alternatives:[...(exercise.alternatives||[]),...(existingAlternatives[exercise.text]||[])]};
+  }
+  root.FalaWriting = {writtenTasks,evaluate,comparable,acceptable};
 })(window);
